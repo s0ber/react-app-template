@@ -3,7 +3,7 @@ import toComponentName from 'utils/to_component_name'
 
 import React, {Component} from 'react'
 import Pages from './pages'
-import {PageLoader} from 'layouts/PageLoader'
+import PageLoader from 'layouts/PageLoader'
 
 @connect((state) => {
   return {

@@ -1,4 +1,4 @@
-import {ENDPOINT} from 'constants/enpoints'
+import {ENDPOINT} from 'constants'
 import request from 'superagent'
 import Cookie from 'cookies-js'
 import showFlashMessage from 'actions/flashMessages/showFlashMessage'

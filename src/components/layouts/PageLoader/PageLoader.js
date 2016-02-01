@@ -1,7 +1,7 @@
 import './PageLoader.sass'
 import React, {Component} from 'react'
 
-export class PageLoader extends Component {
+export default class PageLoader extends Component {
   render() {
     return (
       <div className='PageLoader'>

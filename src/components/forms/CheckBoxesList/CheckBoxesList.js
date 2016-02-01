@@ -1,11 +1,11 @@
 import './CheckBoxesList.sass'
 
 import React, {Component} from 'react'
-import {Label} from '../Label'
-import {InlineLabel} from '../InlineLabel'
-import {Hint} from '../Hint'
+import Label from '../Label'
+import InlineLabel from '../InlineLabel'
+import Hint from '../Hint'
 
-export class CheckBoxesList extends Component {
+export default class CheckBoxesList extends Component {
   render() {
     return (
       <div className='CheckBoxesList'>

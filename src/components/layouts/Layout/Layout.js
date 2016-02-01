@@ -1,9 +1,8 @@
 import './Layout.sass'
 import React, {Component} from 'react'
-import {FlashMessages} from 'layouts/FlashMessages'
-import {Footer} from 'layouts/Footer'
+import FlashMessages from 'layouts/FlashMessages'
 
-export class Layout extends Component {
+export default class Layout extends Component {
   render() {
     return (
       <div className='Layout'>
@@ -61,33 +60,6 @@ Layout.Sidebar = class extends Component {
       <aside className='Layout-sidebar'>
         {this.props.children}
       </aside>
-    )
-  }
-}
-
-Layout.Footer = class extends Component {
-  render() {
-    return (
-      <footer className='Layout-footer'>
-        <div className='Layout-footerInner'>
-          <Footer />
-        </div>
-      </footer>
-    )
-  }
-}
-
-Layout.Modals = class extends Component {
-  render() {
-    return (
-      <div>
-        <div className='Layout-modalBg'></div>
-        <div className='Layout-modals'>
-          <div className='Layout-modalsInner'>
-            {this.props.children}
-          </div>
-        </div>
-      </div>
     )
   }
 }

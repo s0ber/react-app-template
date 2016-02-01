@@ -2,10 +2,9 @@ import React, {Component} from 'react'
 import {reduxForm} from 'redux-form'
 import loginUser from 'actions/currentUser/loginUser'
 
-import {Form} from 'forms/Form'
-import {TextBox} from 'forms/TextBox'
-import {CheckBox} from 'forms/CheckBox'
-import {SmallButton} from 'layouts/SmallButton'
+import Form from 'forms/Form'
+import TextBox from 'forms/TextBox'
+import SmallButton from 'layouts/SmallButton'
 
 @reduxForm({
   form: 'login', fields: ['email', 'password', 'remember_me']
@@ -23,7 +22,6 @@ export default class extends Component {
         <Form.Fields>
           <TextBox required label='Email' {...email} />
           <TextBox password label='Пароль' {...password} />
-          <CheckBox label='Запомнить меня' {...remember_me} />
         </Form.Fields>
         <Form.Actions>
           <SmallButton submit isLoading={this.props.submitting} title='Войти' color='green' />

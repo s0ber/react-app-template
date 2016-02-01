@@ -1,10 +1,10 @@
 import './FileBox.sass'
 
 import React, {Component} from 'react'
-import {Label} from '../Label'
-import {Hint} from '../Hint'
+import Label from '../Label'
+import Hint from '../Hint'
 
-export class FileBox extends Component {
+export default class FileBox extends Component {
   render() {
     return (
       <div className='Textarea'>

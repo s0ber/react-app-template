@@ -1,10 +1,10 @@
 import './CheckBox.sass'
 
 import React, {Component} from 'react'
-import {Label} from '../Label'
-import {Hint} from '../Hint'
+import Label from '../Label'
+import Hint from '../Hint'
 
-export class CheckBox extends Component {
+export default class CheckBox extends Component {
   render() {
     return (
       <div className='CheckBox'>

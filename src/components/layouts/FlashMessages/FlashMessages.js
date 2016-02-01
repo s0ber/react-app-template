@@ -1,10 +1,10 @@
 import './FlashMessages.sass'
 
 import React, {Component} from 'react'
-import {FlashMessage} from '../FlashMessage'
+import FlashMessage from '../FlashMessage'
 import hideFlashMessage from 'actions/flashMessages/hideFlashMessage'
 
-export class FlashMessages extends Component {
+export default class FlashMessages extends Component {
   render() {
     return (
       <div className='FlashMessages'>

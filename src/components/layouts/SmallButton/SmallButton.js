@@ -1,9 +1,9 @@
 import './SmallButton.sass'
 import React, {Component} from 'react'
-import {ButtonLoader} from '../ButtonLoader'
+import ButtonLoader from '../ButtonLoader'
 import classNames from 'classnames'
 
-export class SmallButton extends Component {
+export default class SmallButton extends Component {
   render() {
     const buttonClasses = classNames('SmallButton', this.props.className, {
       'is-green': this.props.color == 'green',

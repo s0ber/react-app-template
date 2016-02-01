@@ -2,7 +2,7 @@ import './InlineLabel.sass'
 
 import React, {Component} from 'react'
 
-export class InlineLabel extends Component {
+export default class InlineLabel extends Component {
   render() {
     return (
       <label className='InlineLabel'>

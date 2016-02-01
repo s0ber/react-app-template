@@ -1,10 +1,10 @@
 import './Menu.sass'
 import React, {Component} from 'react'
 import classNames from 'classnames'
-import pages from 'constants/pages'
-import {Link} from 'layouts/Link'
+import pages from 'constants'
+import Link from 'layouts/Link'
 
-export class Menu extends Component {
+export default class Menu extends Component {
   render() {
     return (
       <div className='Menu'>

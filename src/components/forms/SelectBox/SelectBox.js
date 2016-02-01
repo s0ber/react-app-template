@@ -1,10 +1,10 @@
 import './SelectBox.sass'
 
 import React, {Component} from 'react'
-import {Label} from '../Label'
-import {Hint} from '../Hint'
+import Label from '../Label'
+import Hint from '../Hint'
 
-export class SelectBox extends Component {
+export default class SelectBox extends Component {
   render() {
     return (
       <div className='SelectBox'>

@@ -1,10 +1,10 @@
 import './FlashMessage.sass'
 
 import React, {Component} from 'react'
-import {Icon} from 'icons/Icon'
+import Icon from 'icons/Icon'
 import classNames from 'classnames'
 
-export class FlashMessage extends Component {
+export default class FlashMessage extends Component {
   render() {
     const message = this.props.message
     const flashMessageClasses = classNames('FlashMessage', {

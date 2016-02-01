@@ -1,4 +1,4 @@
-import {processRouteChange} from 'routing'
+import {processRouteChange} from './processRouteChange'
 
 export default function routing({dispatch, getState}) {
   return (next) => {

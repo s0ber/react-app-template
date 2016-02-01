@@ -1,7 +1,7 @@
 import './ButtonLoader.sass'
 import React, {Component} from 'react'
 
-export class ButtonLoader extends Component {
+export default class ButtonLoader extends Component {
   render() {
     return (
       <div className='ButtonLoader'>

@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 import {tinyActions} from 'redux-tiny-router'
 import classNames from 'classnames'
 
-export class Link extends Component {
+export default class Link extends Component {
   navigateToPath = (e) => {
     e.preventDefault()
     this.context.store.dispatch(tinyActions.navigateTo(this.props.path, null))

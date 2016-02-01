@@ -1,4 +1,4 @@
-import {ENDPOINT} from 'constants/enpoints'
+import {ENDPOINT} from 'constants'
 import request from 'superagent'
 
 export default function(path, query = {}) {

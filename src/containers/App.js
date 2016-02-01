@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
-import {Layout} from '../components/layouts/Layout'
-import {FlashMessages} from 'layouts/FlashMessages'
-import {Menu} from 'layouts/Menu'
+import Layout from 'layouts/Layout'
+import FlashMessages from 'layouts/FlashMessages'
+import Menu from 'layouts/Menu'
 
 import CurrentPage from './CurrentPage'
 import logoutUser from 'actions/currentUser/logoutUser'
@@ -28,7 +28,7 @@ export default class extends Component {
     const isAuthorized = this.props.currentUser && this.props.currentUser.role !== 'Anonymous'
 
     return (
-      <Layout >
+      <Layout>
         {(this.props.flashMessages.length > 0) && <FlashMessages messages={this.props.flashMessages} dispatch={this.props.dispatch} />}
         <Layout.Main>
           {isAuthorized &&
@@ -46,7 +46,6 @@ export default class extends Component {
               </Layout.Sidebar>}
           </Layout.Body>
         </Layout.Main>
-        <Layout.Footer />
       </Layout>
     )
   }

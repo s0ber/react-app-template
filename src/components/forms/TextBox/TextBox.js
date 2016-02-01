@@ -1,11 +1,11 @@
 import './TextBox.sass'
 
 import React, {Component} from 'react'
-import {Label} from '../Label'
-import {Hint} from '../Hint'
+import Label from '../Label'
+import Hint from '../Hint'
 import classNames from 'classnames'
 
-export class TextBox extends Component {
+export default class TextBox extends Component {
   render() {
     const {children, required, ...other} = this.props
     const textBoxClasses = classNames('TextBox', {'is-listValue': this.props.isListValue})

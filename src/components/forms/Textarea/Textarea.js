@@ -1,10 +1,10 @@
 import './Textarea.sass'
 
 import React, {Component} from 'react'
-import {Label} from '../Label'
-import {Hint} from '../Hint'
+import Label from '../Label'
+import Hint from '../Hint'
 
-export class Textarea extends Component {
+export default class Textarea extends Component {
   render() {
     return (
       <div className='Textarea'>
