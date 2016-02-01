@@ -21,10 +21,10 @@ export default class extends Component {
       <Form onSubmit={this.props.handleSubmit(this.submit)}>
         <Form.Fields>
           <TextBox required label='Email' {...email} />
-          <TextBox password label='Пароль' {...password} />
+          <TextBox password label='Password' {...password} />
         </Form.Fields>
         <Form.Actions>
-          <SmallButton submit isLoading={this.props.submitting} title='Войти' color='green' />
+          <SmallButton submit isLoading={this.props.submitting} title='Log In' color='green' />
         </Form.Actions>
       </Form>
     )

@@ -11,18 +11,20 @@ export function processRouteChange(next, action, getState, dispatch) {
 
   if (action.option == 'popEvent') {
     next(action)
+  } else if (router.path == getState().router.path) {
+    return
   }
 
   loadCurrentUser(getState(), dispatch).then(() => {
     const {currentUser} = getState()
     const isLoggedIn = currentUser && currentUser.role !== 'Anonymous'
 
-    if (!isLoggedIn) {
-      if (currentRoute !== routes.LOGIN) {
-        return dispatch(tinyActions.navigateTo(paths.LOGIN_PATH()))
+    if (isLoggedIn) {
+      if (currentRoute == routes.LOGIN) {
+        return dispatch(tinyActions.navigateTo(paths.ROOT_PATH()))
       }
-    } else if (currentRoute == routes.LOGIN) {
-      return dispatch(tinyActions.navigateTo(paths.ROOT_PATH()))
+    } else if (currentRoute !== routes.ROOT && currentRoute !== routes.LOGIN) {
+      return dispatch(tinyActions.navigateTo(paths.LOGIN_PATH()))
     }
 
     fetchDataForRoute(router).then((data) => {

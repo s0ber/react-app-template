@@ -4,9 +4,12 @@ import {connect} from 'react-redux'
 import Layout from 'layouts/Layout'
 import FlashMessages from 'layouts/FlashMessages'
 import Menu from 'layouts/Menu'
+import Link from 'layouts/Link'
 
+import {paths} from 'routes'
 import CurrentPage from './CurrentPage'
 import logoutUser from 'actions/currentUser/logoutUser'
+import {ANONYMOUS} from 'constants'
 
 @connect((state) => {
   return {
@@ -25,27 +28,21 @@ export default class extends Component {
   }
 
   render() {
-    const isAuthorized = this.props.currentUser && this.props.currentUser.role !== 'Anonymous'
+    const isLoggedIn = this.props.currentUser && this.props.currentUser !== ANONYMOUS
 
     return (
       <Layout>
         {(this.props.flashMessages.length > 0) && <FlashMessages messages={this.props.flashMessages} dispatch={this.props.dispatch} />}
-        <Layout.Main>
-          {isAuthorized &&
-            <div>
-              Вы вошли как <b>{this.props.currentUser.full_name}</b>, <span onClick={this.logoutUser}>выйти</span>
-            </div>
-          }
-          <Layout.Body>
-            <Layout.Content>
-              <CurrentPage />
-            </Layout.Content>
-            {isAuthorized && this.props.currentPageId &&
-              <Layout.Sidebar>
-                <Menu selectedPageId={this.props.currentPageId} />
-              </Layout.Sidebar>}
-          </Layout.Body>
-        </Layout.Main>
+        <Menu selectedPageId={this.props.currentPageId} />
+        <CurrentPage />
+        {isLoggedIn ?
+          <p>
+            You are logged in as <b>{this.props.currentUser.full_name}</b>, <span onClick={this.logoutUser}>logout</span>
+          </p> :
+          <p>
+            Please <Link path={paths.LOGIN_PATH()}>log in</Link> to access hidden pages.
+          </p>
+        }
       </Layout>
     )
   }

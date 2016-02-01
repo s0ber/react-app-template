@@ -1,11 +1,9 @@
 import get from 'utils/req/get'
 
-export default function(positionId) {
-  return get(`/positions/${positionId}`).then((res) => {
-    if (res.position) {
-      return {
-        pageId: 'page2'
-      }
-    }
+export default function() {
+  return new Promise((resolve, reject) => {
+    resolve({
+      pageId: 'page2'
+    })
   })
 }

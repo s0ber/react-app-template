@@ -1,4 +1,3 @@
-import './Link.sass'
 import React, {Component} from 'react'
 import {tinyActions} from 'redux-tiny-router'
 import classNames from 'classnames'

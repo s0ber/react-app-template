@@ -8,7 +8,7 @@ export default function(state = null, action = {}) {
     case LOGOUT_USER:
       return ANONYMOUS
     case SET_CURRENT_USER:
-      return action.payload || ANONYMOUS
+      return action.payload
     default:
       return state
   }

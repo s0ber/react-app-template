@@ -1,10 +1,10 @@
 import get from 'utils/req/get'
+import {ANONYMOUS} from 'constants'
 
+// Implement ajax request to get information about current user
 export default function() {
-  return get('/current_user').then((res) => {
-    if (res.user) {
-      return res.user
-    }
+  return new Promise((resolve, reject) => {
+    resolve(ANONYMOUS)
   })
 }
 
