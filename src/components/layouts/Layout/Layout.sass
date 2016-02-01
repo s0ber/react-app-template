@@ -1,0 +1,72 @@
+@import '~styles/imports.sass'
+
+.Layout
+  height: 100%
+
+.Layout-header
+  height: 65px
+  background: $blue_bg
+  border-radius: 0 0 5px 5px
+
+.Layout-main
+  width: 1020px
+  min-height: 100%
+  margin: 0 auto -65px
+
+.Layout-body
+  +clearfix
+
+.Layout-empty
+  height: 65px
+
+.Layout-content
+  width: 100%
+  float: left
+
+.Layout-sidebar
+  float: left
+  width: 200px
+  margin-left: -100%
+
+.Layout-footer
+  height: 65px
+
+.Layout-footerInner
+  width: 1020px
+  height: 65px
+  margin: 0 auto
+  background: $blue_bg
+  color: #fff
+  border-radius: 5px 5px 0 0
+
+.Layout-modalBg
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #202327
+  z-index: 200
+  opacity: .7
+
+.Layout-modals
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 210
+  overflow: auto
+
+.Layout-modalsInner
+  position: relative
+  height: 100%
+  padding: 30px 0
+  text-align: center
+  box-sizing: border-box
+
+  &:after
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
